@@ -1,0 +1,147 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #f8fafc, #e2e8f0);
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 0.6s ease-in-out;
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Page Container */
+.container {
+    max-width: 900px;
+    margin: auto;
+    animation: slideUp 0.8s ease-in-out;
+}
+
+/* Box Wrapping the Form */
+.box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Form Container (Now Inside Box) */
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+/* Card Styling */
+.card {
+    width: 45%;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    animation: slideUp 0.8s ease-in-out;
+}
+
+/* Headings */
+h1 {
+    font-size: 24px;
+    color: #333;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Paragraphs */
+p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Form Elements */
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-in-out forwards;
+    text-align: left; /* Align labels to the left */
+}
+
+input, select {
+    padding: 12px; /* Increased padding for better touch targets */
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-in-out forwards;
+}
+
+/* Input Hover & Focus Effects */
+input:hover, select:hover {
+    transform: scale(1.02);
+}
+
+input:focus, select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Added focus shadow for better accessibility */
+}
+
+/* Submit Button */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Result Box */
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    transition: opacity 0.5s ease; /* Added a smoother opacity transition */
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design: Stack on smaller screens */
+@media (max-width: 768px) {
+    .form-container {
+        flex-direction: column;
+    }
+    .card {
+        width: 100%;
+    }
+}
